@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Graphic Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <script src="script/script.js"></script>
+</head>
+<body onload="document.getElementsByTagName('body')[0].style.opacity = 1;">
+    <!--Content-->
+    <div class="content portfolio-body">
+        <div id="card-video-1" class="card-wrapper">
+            <div class="video-cards pointer" onclick="showModal('mograph-modal-1')">
+                <div id="card-1">
+                    <img class="portrait" src="src/video-card-1-1.jpg">
+                    <img class="frame" src="src/video-frame-1-1.svg">
+                </div>
+                <div id="card-2">
+                    <img class="portrait" src="src/video-card-1-2.gif">
+                    <img class="frame" src="src/video-frame-1-2.svg">
+                </div>
+            </div>
+            <div class="video-labels">
+                <span id="label-title">"Choose your Marks"</span>
+                <span id="label-desc">Experimental Video</span>
+            </div>
+        </div>
+        <div id="card-video-2" class="card-wrapper">
+            <div class="video-labels">
+                <span id="label-title">Dica Smart</span>
+                <span id="label-desc">Instagram Reels Post</span>
+            </div>
+            <div class="video-cards pointer" onclick="showModal('mograph-modal-2')">
+                <div id="card-1">
+                    <img class="portrait" src="src/video-card-2-1.png">
+                    <img class="frame" src="src/video-frame-2-1.svg">
+                </div>
+                <div id="card-2">
+                    <img class="portrait" src="src/polaroid-3-back.png">
+                    <img class="frame" src="src/video-frame-2-2.svg">
+                </div>
+            </div>
+        </div>
+        <div class="back-arrow-wrapper">
+            <svg class="back-arrow pointer" width="60" height="124" viewBox="0 0 60 124" fill="none" xmlns="http://www.w3.org/2000/svg" onmouseenter="backArrowEnter()" onmouseleave="backArrowLeave()" onclick="window.location.href='index.html'">
+                <path d="M32.8284 1.17157C31.2663 -0.390518 28.7337 -0.390518 27.1716 1.17157L1.71572 26.6274C0.153625 28.1895 0.153625 30.7222 1.71572 32.2843C3.27782 33.8464 5.81048 33.8464 7.37258 32.2843L30 9.65686L52.6274 32.2843C54.1895 33.8464 56.7222 33.8464 58.2843 32.2843C59.8464 30.7222 59.8464 28.1895 58.2843 26.6274L32.8284 1.17157ZM34 99L34 4L26 4L26 99L34 99Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div id="modal">
+        <div class="content">
+            <div class="src-wrapper">
+                <div class="src">
+                    <video class="mograph-modal-1-visibility" autoplay loop muted>
+                        <source src="src/mograph-modal-1.mov" type="video/mp4">
+                    </video>
+                    
+                    <video class="mograph-modal-2-visibility" autoplay loop muted>
+                        <source src="src/mograph-modal-2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="label-wrapper">
+                <div class="label header">
+                    <div>
+                        <span class="title mograph-modal-1-visibility">"Cover me" Project</span>
+                        <span class="subtitle mograph-modal-1-visibility">2023</span>
+
+                        <span class="title mograph-modal-2-visibility">Instagram Post<br>"Dica Smart"</span>
+                        <span class="subtitle mograph-modal-2-visibility">2024</span>
+
+                    </div>
+                </div>
+                <div class="label body">
+                    <div>
+                        <p class="mograph-modal-1-visibility">This video is a take on domestic violence,<br>here different hands represent a call for help,<br>following an attack.</p>
+
+                        <p class="mograph-modal-2-visibility">This is an informative video made with<br>purpose of teaching students about a time<br>management technique called<br>Eisenhower Matrix.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

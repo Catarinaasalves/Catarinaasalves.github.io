@@ -1,0 +1,826 @@
+/*
+======================
+        Global
+======================
+*/
+@font-face {
+    font-family: 'Retro Signature';
+    src: url('../src/retrosignature-webfont.woff2') format('woff2'),
+        url('../src/retrosignature-webfont.woff') format('woff');
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    transition: opacity 0.5s;
+    background-color: black;
+    position: relative;
+    opacity: 0;
+}
+
+.rs-font{
+    font-family: Retro Signature;
+}
+.pointer{
+    cursor: pointer;
+}
+.content{
+    width: 1045px;
+    display: block;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.back-arrow{
+    position: absolute;
+    top: -10px;
+    right: 6px;
+    transform: rotate(-90deg);
+    transition: all 0.25s;
+    z-index: 0;
+    width: 50px;
+
+}
+.back-arrow path{
+    transition: inherit;
+}
+.back-arrow:hover{
+    right: 18px;
+}
+.portfolio-body{
+    background-color: #8a569f;
+}
+.portrait-frame{
+    display: inline-block;
+    position: relative;
+}
+.portrait-frame .portrait{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.portrait-frame .frame{
+    position: relative;
+    z-index: 1;
+}
+.portrait-frame-wrapper{
+    display: inline-block;
+}
+.portrait-frame-wrapper span{
+    display: block;
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+}
+.portrait-frame-wrapper .label-title{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 18px 0 17px 0;
+}
+
+/*
+======================== 
+        HomePage
+========================
+*/
+#home-body{
+    margin-top: 277px;
+}
+nav{
+    position: absolute;
+    top: 0;
+    right: 57px;
+    transform: translateX(100%);
+    width: 175px;
+}
+nav a{
+    display: block;
+    color: white;
+    font-family: Montserrat;
+    font-size: 22px;
+    transition: all 0.25s;
+    margin: 16px;
+    text-decoration: none;
+}
+nav a:hover{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#scroll-arrow-wrapper{
+    position: absolute;
+    right: -50px;
+}
+#scroll-arrow{
+    position: fixed;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+/*
+--------------
+Intro & Resume
+--------------
+*/
+#first-bg{
+    padding-top: 1px;
+    position: relative;
+    background-color: #8a569f;
+}
+#nome{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    position: absolute;
+    left: -108px;
+    top: -94px;
+}
+#nome-1, #nome-2{
+    margin: 0;
+}
+#nome-2{
+    margin-top: -28px
+}
+#intro-txt{
+    margin-top: 151px;
+    margin-left: 629px;
+    width: 348px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-style: normal;
+    line-height: normal;
+}
+#intro-txt .head{
+    font-size: 44px;
+    font-weight: 900;
+}
+#intro-txt .body{
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+    margin-top: 38px;
+}
+#intro-txt .body span{
+    color: #F5F5F5;
+    font-size: 133px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    top: -40px;
+}
+
+#portrait-photo{
+    margin-left: 48px;
+}
+#portrait-photo .portrait{
+    width: 435px;
+    top: calc(50% - 10px);
+    border-radius: 30px;
+}
+.portrait-frame #photo-arrow{
+    position: absolute;
+    top: 42.5%;
+    left: -110px;
+}
+
+#curriculo{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 94px;
+    margin-left: 90px;
+}
+#curriculo p{
+    margin: 24px 0;
+}
+.curriculo-title{
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+}
+#curriculo .rs-line{
+    position: relative;
+}
+#curriculo .rs-font{
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-57%);
+}
+#scribbles-1{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,70%);
+}
+
+/*
+---------
+Portfolio
+---------
+*/
+#portfolio{
+    position: relative;
+    bottom: -90px;
+}
+.social-media-cards, .graphic-design-cards, .video-and-mograph-cards{
+    background-color: white;
+    position: relative;
+    width: 385px;
+    height: 470px;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.1);
+    top: 0;
+}
+.social-media-cards#front-card, .graphic-design-cards#front-card, .video-and-mograph-cards#front-card{
+    position: absolute;
+    z-index: 1;
+}
+
+/*  polaroid labels  */
+.social-media-cards#front-card span, .graphic-design-cards#front-card span, .video-and-mograph-cards#front-card span{
+    font-size: 88px;
+    color: #8a569f;
+    display: block;
+    text-align: center;
+    margin-top: -20px;
+}
+.video-and-mograph-cards#front-card span{
+    font-size: 80px;
+    margin-top: -10px;
+    line-height: 40px;
+}
+
+/*  polaroid categories position  */
+#portfolio #social-media{
+    float: right;
+    margin-right: 75px;
+    position: relative;
+    margin-top: -30px;
+}
+#portfolio #graphic-design{
+    float: left;
+    margin-left: 40px;
+    position: relative;
+    margin-top: 475px;
+}
+#portfolio #video-and-mograph{
+    float: right;
+    margin-right: 90px;
+    position: relative;
+    margin-top: 475px;
+}
+
+/*  polaroids rotation  */
+.social-media-cards#back-card{
+    transform: rotate(1.5deg);
+}
+.social-media-cards#front-card{
+    transform: rotate(15deg) translateX(-6%);
+}
+.graphic-design-cards#back-card{
+    transform: rotate(10deg);
+}
+.graphic-design-cards#front-card{
+    transform: rotate(-6deg);
+}
+.video-and-mograph-cards#back-card{
+    transform: rotate(-15deg);
+}
+
+/*  polaroid images  */
+.polaroid-img-wrapper{
+    width: 100%;
+    padding: 27px 22px 17px 22px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+}
+.polaroid-img-overflow{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.polaroid-img-wrapper img{
+    height: 100%;
+}
+.video-and-mograph-cards img{
+    width: 100%;
+    height: unset;
+}
+
+/*  background beans position  */
+.blob-svg{
+    position: absolute;
+    z-index: -5;
+}
+.blob-svg#first-blob{
+    left: 0;
+    top: -300px;
+}
+.blob-svg#second-blob{
+    right: 0;
+    top: 250px;
+}
+.blob-svg#third-blob{
+    left: 0;
+    top: 715px;
+}
+
+/*
+-------
+Contact
+-------
+*/
+#last-bg-wrapper{
+    z-index: -2;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+#last-bg-wrapper #scribbles-2{
+    position: absolute;
+    z-index: 1;
+}
+#last-bg{
+    width: 100%;
+    height: 475px;
+    padding: 1px;
+    margin: -1px;
+    margin-top: 12px;
+    background-color: #8a569f;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+}
+#last-bg span{
+    display: block;
+    color: white;
+    font-size: 24px;
+    font-family: Montserrat;
+    margin: 24px 90px;
+    font-weight: 500;
+}
+#last-bg span#contacth{
+    margin: 175px 0 55px 90px;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+
+/*
+============================
+        social media
+============================        
+  1  */
+#portrait-social-1{
+    float: left;
+    margin-top: 99px;
+    margin-left: 62px;
+}
+#portrait-social-1 .portrait{
+    width: 382px;
+    left: calc(50% - 2px);
+    top: calc(50% - 6px);
+}
+#portrait-social-1 span{
+    margin-left: 29px;
+}
+
+/*  2  */
+#portrait-social-2{
+    float: right;
+    margin-top: 81px;
+    margin-right: 89px;
+}
+#portrait-social-2 .portrait{
+    width: 258px;
+    left: calc(50% + 1px);
+    top: calc(50% - 2px);
+}
+#portrait-social-2 span{
+    margin-left: 15px;
+}
+
+/*  3  */
+#portrait-social-3{
+    padding-bottom: 35px;
+    position: relative;
+    margin-top: 79px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#portrait-social-3 .portrait{
+    width: 357px;
+    top: calc(50% - 5px);
+}
+#portrait-social-3 span{
+    margin-left: 22px;
+}
+#portrait-social-3 .label-title{
+    margin-top: 8px;
+}
+
+/*
+==============================
+        Graphic Design
+==============================        
+  1  */
+#portrait-graphic-1{
+    margin-top: 99px;
+    margin-left: 72px;
+}
+#portrait-graphic-1 .portrait{
+    width: 352px;
+    top: calc(50% - 4px);
+}
+#portrait-graphic-1 span{
+    margin-left: 19px;
+}
+#portrait-graphic-1 .label-title{
+    margin-top: 26px;
+}
+
+/*  2  */
+#portrait-graphic-2{
+    float: right;
+    margin-top: 90px;
+    margin-right: 74px;
+}
+#portrait-graphic-2 .portrait{
+    width: 338px;
+    top: calc(50% - 4px);
+    left: calc(50% - 2px);
+}
+#portrait-graphic-2 span{
+    margin-left: 12px;
+}
+#portrait-graphic-2 .label-title{
+    margin-top: 17px;
+}
+
+/*  3  */
+#portrait-graphic-3{
+    padding-bottom: 35px;
+    margin-top: 89px;
+    margin-left: 72px;
+}
+#portrait-graphic-3 .portrait{
+    width: 352px;
+    top: calc(50% - 4px);
+}
+#portrait-graphic-3 span{
+    margin-left: 19px;
+}
+#portrait-graphic-3 .label-title{
+    margin-top: 24px;
+}
+
+/*  4  */
+#portrait-graphic-4{
+    float: right;
+    margin-top: 92px;
+    margin-right: 74px;
+}
+#portrait-graphic-4 .portrait{
+    width: 349px;
+    top: calc(50% - 5px);
+    left: calc(50% + 1px);
+}
+#portrait-graphic-4 span{
+    margin-left: 12px;
+}
+#portrait-graphic-4 .label-title{
+    margin-top: 29px;
+}
+
+
+/*
+=================================
+        Video and Mograph
+=================================
+------
+Global
+------
+*/
+.card-wrapper{
+    display: flex;
+    align-items: center;
+}
+.video-cards{
+    position: relative;
+    flex: 0;
+}
+.video-cards div{
+    position: absolute;
+}
+.video-cards .portrait{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.video-cards .frame{
+    position: relative;
+}
+.video-labels{
+    flex: 1;
+}
+.video-labels span{
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    font-family: Montserrat;
+}
+.video-labels #label-title{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+/*
+-------
+Content
+-------
+  1
+*/
+#card-video-1{
+    position: relative;
+    top: 53px;
+}
+#card-video-1 .video-cards{
+    margin-left: -100px;
+}
+#card-video-1 .video-cards #card-1 .portrait{
+    width: 270px;
+    transform: translate(-50%,-50%) rotate(-11.6deg);
+    top: calc(50% - 6px);
+    left: calc(50% - 2px);
+}
+#card-video-1 .video-cards #card-1 .frame{
+    z-index: 2;
+}
+#card-video-1 .video-cards #card-1{
+    margin-top: 5px;
+    position: absolute;
+}
+#card-video-1 .video-cards #card-2{
+    position: relative;
+    margin-left: 315px;
+}
+#card-video-1 .video-cards #card-2 .portrait{
+    width: 233px;
+    z-index: 4;
+    transform: translate(-50%,-50%) rotate(4deg);
+    top: calc(50% - 9px);
+    left: calc(50% - 8px);
+}
+#card-video-1 .video-cards #card-2 .frame{
+    z-index: 5;
+}
+#card-video-1 .video-labels{
+    margin-left: 115px;
+}
+#card-video-1 .video-labels #label-desc{
+    margin-left: 16px;
+}
+
+/*  2  */
+#card-video-2{
+    position: relative;
+    top: 45px;
+    right: 0;
+    background-color:#8A569F;
+}
+#card-video-2 .video-cards{
+    margin-right: -25px;
+    position: relative;
+    right: 0;
+    display: inline-block;
+}
+#card-video-2 .video-cards div{
+    right: 0;
+    float: right;
+}
+#card-video-2 .video-cards #card-1 .portrait{
+    height: 390px;
+    z-index: 4;
+    transform: translate(-50%,-50%) rotate(-3.7deg);
+    top: calc(50% - 6px);
+    left: calc(50% + 2px);
+}
+#card-video-2 .video-cards #card-1 .frame{
+    z-index: 5;
+    filter: drop-shadow(0px 4px 18.8px rgba(0, 0, 0, 0.25)); 
+}
+#card-video-2 .video-cards #card-1{
+    margin-top: 5px;
+    margin-right: 260px;
+}
+#card-video-2 .video-cards #card-2{
+    position: relative;
+}
+#card-video-2 .video-cards #card-2 .portrait{
+    width: 228px;
+    transform: translate(-50%,-50%) rotate(12.3deg);
+    top: calc(50% - 8px);
+    left: calc(50% - 2px);
+}
+#card-video-2 .video-cards #card-2 .frame{
+    z-index: 2;
+}
+#card-video-2 .video-labels{
+    margin-left: 166px;
+}
+
+/*
+=====================
+        Modal
+=====================
+------
+Global
+------
+*/
+#modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.25);
+    transition: all 0.5s;
+}
+#modal .content{
+    background-color: black;
+    border-radius: 25px;
+    width: 1017px;
+    height: 510px;
+    display: flex;
+}
+#modal .content .src-wrapper{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+    flex: 1;
+}
+#modal .content .src{
+    display: flex;
+    width: 435px;
+    position: relative;
+}
+#modal .src .small{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#modal .src .small img, #modal .src .small video{
+    width: 100%;
+}
+#modal .src .big{
+    flex: 0;
+}
+#modal .label-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    color: white;
+    font-family: Montserrat;
+    flex-direction: column;
+}
+#modal .label{
+    flex: 1;
+    display: flex;
+    padding-left: 50px;
+}
+#modal .header{
+    align-items: end;
+}
+#modal .header span{
+    display: block;
+}
+#modal .header .title{
+    font-size: 24px;
+    font-weight: 800;
+}
+#modal .header .subtitle{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px 0 15px 0;
+}
+#modal .body{
+    align-items: start;
+    font-size: 18px;
+}
+
+/*
+-----------------------
+Content Picker & Layout
+-----------------------
+  social modal
+*/
+.social-modal-1-visibility, .social-modal-2-visibility, .social-modal-3-visibility{
+    display: none!important;
+}
+.social-modal-1 .social-modal-1-visibility, .social-modal-2 .social-modal-2-visibility, .social-modal-3 .social-modal-3-visibility{
+    display: block!important;
+}
+.social-modal-1 .src .big, .social-modal-2 .src .big, .social-modal-3 .src .big{
+    height: 100%;
+}
+.social-modal-1 .src{
+    height: 285.5px;
+}
+.social-modal-2 .src{
+    height: 380.5px;
+}
+.social-modal-3 .src{
+    height: 276px;
+}
+
+/*  graphic modal  */
+.graphic-modal-1-visibility, .graphic-modal-2-visibility, .graphic-modal-3-visibility, .graphic-modal-4-visibility{
+    display: none!important;
+}
+.graphic-modal-1 .graphic-modal-1-visibility, .graphic-modal-2 .graphic-modal-2-visibility, .graphic-modal-3 .graphic-modal-3-visibility, .graphic-modal-4 .graphic-modal-4-visibility{
+    display: block!important;
+}
+
+.graphic-modal-1 .src .right{
+    position: relative;
+}
+.graphic-modal-1 .src .left, .graphic-modal-1 .src .right{
+    flex-direction: column;
+}
+.graphic-modal-1 .src .left .big{
+    width: 253px;
+}
+.graphic-modal-1 .src .big-2{
+    width: 270px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.graphic-modal-1 .src .small-img{
+    width: 180px;
+}
+.graphic-modal-2 .src, .graphic-modal-3 .src{
+    flex-direction: column;
+}
+.graphic-modal-2 .src .big, .graphic-modal-3 .src .big{
+    width: 100%;
+}
+.graphic-modal-2 .src .small, .graphic-modal-3 .src .small{
+    flex-direction: row!important;
+}
+.graphic-modal-2 .src .small img{
+    height: 163px;
+}
+.graphic-modal-3 .src .small img{
+    height: 188px;
+}
+.graphic-modal-4 .src{
+    height: 380px;
+}
+.graphic-modal-4 .src .small{
+    width: 264px;
+    flex: unset!important;
+    margin-left: 20px;
+}
+.graphic-modal-4 .src .big{
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+/*  mograph modal  */
+.mograph-modal-1-visibility, .mograph-modal-2-visibility, .mograph-modal-3-visibility{
+    display: none!important;
+}
+.mograph-modal-1 .mograph-modal-1-visibility, .mograph-modal-2 .mograph-modal-2-visibility, .mograph-modal-3 .mograph-modal-3-visibility{
+    display: block!important;
+}
+
+.mograph-modal-1 .src, .mograph-modal-2 .src{
+    height: 100%;
+    justify-content: center;
+}
+.mograph-modal-1 video, .mograph-modal-2 video{
+    height: 100%;
+}

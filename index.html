@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <script src="script/script.js"></script>
+</head>
+<body onload="document.getElementsByTagName('body')[0].style.opacity = 1;">
+    <div id="home-body" class="content">
+        <div id="first-bg">
+            <div id="dados">
+                <!--Navbar-->
+                <nav>
+                    <a href="#nome">about me</a>
+                    <a href="#curriculo">resume</a>
+                    <a href="#scribbles-1">portfolio</a>
+                    <a href="#contacth">contact</a>
+                </nav>
+
+                <!--Intro & Resume-->
+                <div id="nome">
+                    <span id="nome-1">CATARINA</span><br>
+                    <span id="nome-2">ALVES</span>
+                </div>
+                <div id="intro-txt">
+                    <span class="head">welcome here</span>
+                    <p class="body">
+                        This is a small insight to my very own design journey.
+                        Buckle up,<br>
+                        It's about to get
+                        <span class="rs-font">whimsical</span>
+                    </p>
+                </div>
+                <div id="portrait-photo" class="portrait-frame">
+                    <img class="portrait" src="src/retrato.jpg">
+                    <img class="frame" src="src/photo-frame.svg">
+                    <img id="photo-arrow" src="src/photo-arrow.svg">
+                </div>
+            </div>
+
+            <!--Curriculo-->
+            <div id="curriculo">
+                <p id="education">
+                    <span class="curriculo-title">Education</span>
+                    <br>
+                    University Education<br>
+                    <span class="rs-line">Undergraduate Program in &nbsp;<span class="rs-font">design</span></span><br> 
+                    Universidade de Aveiro 2022 - present<br>
+                    <br>
+                    Secondary Education<br>
+                    Arts<br>
+                    Escola Básica e Secundária de Santa Maria da Feira 2019 - 2022<br>
+                </p>
+                <p id="expertise">
+                    <span class="curriculo-title">Expertise</span>
+                    <br>
+                    Visual/Graphic Design<br>
+                    Social Media Design<br>
+                    Video and Image Editing<br>
+                    Motion Graphics<br>
+                </p>
+                <p id="language">
+                    <span class="curriculo-title">Language</span>
+                    <br>
+                    Portuguese: Level 5<br>
+                    English: Level 4<br>
+                </p>
+                <p id="experience">
+                    <span class="curriculo-title">Experience</span>
+                    <br>
+                    Comunication and Image Department member at<br>
+                    Aveiro Smart Business<br>
+                    2023 - Present<br>
+                </p>
+            </div>
+            <img id="scribbles-1" src="src/scribbles-1.svg">
+        </div>
+
+        <!--Portfolio-->
+        <div id="portfolio">
+            <div id="social-media" class="pointer" onclick="window.location.href='socialMedia.html'">
+                <div id="back-card" class="social-media-cards">
+                    <div class="polaroid-img-wrapper">
+                        <div class="polaroid-img-overflow">
+                            <img src="src/social-polaroid-3.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div id="front-card" class="social-media-cards">
+                    <div class="polaroid-img-wrapper">
+                        <div class="polaroid-img-overflow">
+                            <img src="src/social-polaroid-2.png">
+                        </div>
+                    </div>
+                    <span class="rs-font">social media</span>
+                </div>
+            </div>
+
+            <div id="graphic-design" class="pointer" onclick="window.location.href='graphicDesign.html'">
+                <div id="back-card" class="graphic-design-cards">
+                    <div class="polaroid-img-wrapper">
+                        <div class="polaroid-img-overflow">
+                            <img src="src/graphic-polaroid-2.png">
+                        </div>
+                    </div>
+                </div>
+                <div id="front-card" class="graphic-design-cards">
+                    <div class="polaroid-img-wrapper">
+                        <div class="polaroid-img-overflow">
+                            <img src="src/graphic-polaroid-1.png">
+                        </div>
+                    </div>
+                    <span class="rs-font">graphic design</span>
+                </div>
+            </div>
+
+            <div id="video-and-mograph" class="pointer" onclick="window.location.href='videoMograph.html'">
+                <div id="back-card" class="video-and-mograph-cards">
+                    <div class="polaroid-img-wrapper">
+                        <div class="polaroid-img-overflow">
+                            <img src="src/polaroid-3-back.png">
+                        </div>
+                    </div>
+                </div>
+                <div id="front-card" class="video-and-mograph-cards">
+                    <div class="polaroid-img-wrapper">
+                        <div class="polaroid-img-overflow">
+                            <img src="src/polaroid-3-front.jpg">
+                        </div>
+                    </div>
+                    <span class="rs-font">video and<br>mograph</span>
+                </div>
+            </div>
+
+            <!--blobs-->
+            <img id="first-blob" class="blob-svg" src="src/blob1.svg">
+            <img id="second-blob" class="blob-svg" src="src/blob2.svg">
+            <img id="third-blob" class="blob-svg" src="src/blob3.svg">
+        </div>
+        <!--Contact-->
+        <div id="last-bg-wrapper">
+            <img id="scribbles-2" src="src/scribbles-2.svg">
+            <div id="last-bg">
+                <span id="contacth">contact</span>
+                <span>+351 912345678</span>
+                <span>cat.alves@ua.pt</span>
+            </div>
+        </div>
+        <div id="scroll-arrow-wrapper">
+            <img id="scroll-arrow" class="pointer" src="src/arrow.svg" onclick="scrollToTop()">
+        </div>
+    </div>
+</body>
+</html>

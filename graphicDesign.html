@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Graphic Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <script src="script/script.js"></script>
+</head>
+<body onload="document.getElementsByTagName('body')[0].style.opacity = 1;">
+    <!--Content-->
+    <div class="content portfolio-body">
+        <div id="portrait-graphic-1" class="portrait-frame-wrapper pointer" onclick="showModal('graphic-modal-1')">
+            <div class="portrait-frame">
+                <img class="portrait" src="src/graphic-polaroid-1.png">
+                <img class="frame" src="src/graphic-frame-1.svg">
+            </div>
+            <span class="label-title">Travelling Exhibition</span>
+            <span>Graphic Design</span>
+        </div>
+        <div id="portrait-graphic-2" class="portrait-frame-wrapper pointer" onclick="showModal('graphic-modal-2')">
+            <div class="portrait-frame">
+                <img class="portrait" src="src/graphic-polaroid-2.png">
+                <img class="frame" src="src/graphic-frame-2.svg">
+            </div>
+            <span class="label-title">ASB Recruitment</span>
+            <span>Visual Identity</span>
+        </div>
+        <div id="portrait-graphic-3" class="portrait-frame-wrapper pointer" onclick="showModal('graphic-modal-3')">
+            <div class="portrait-frame">
+                <img class="portrait" src="src/graphic-polaroid-3.jpg">
+                <img class="frame" src="src/graphic-frame-3.svg">
+            </div>
+            <span class="label-title">Linhas & Projetos lda</span>
+            <span>Logo Design</span>
+        </div>
+        <div id="portrait-graphic-4" class="portrait-frame-wrapper pointer" onclick="showModal('graphic-modal-4')">
+            <div class="portrait-frame">
+                <img class="portrait" src="src/graphic-polaroid-4.jpg">
+                <img class="frame" src="src/graphic-frame-4.svg">
+            </div>
+            <span class="label-title">Miss Whimsy Art</span>
+            <span>Naming + Branding + Logo</span>
+        </div>
+        <div class="back-arrow-wrapper">
+            <svg class="back-arrow pointer" width="60" height="124" viewBox="0 0 60 124" fill="none" xmlns="http://www.w3.org/2000/svg" onmouseenter="backArrowEnter()" onmouseleave="backArrowLeave()" onclick="window.location.href='index.html'">
+                <path d="M32.8284 1.17157C31.2663 -0.390518 28.7337 -0.390518 27.1716 1.17157L1.71572 26.6274C0.153625 28.1895 0.153625 30.7222 1.71572 32.2843C3.27782 33.8464 5.81048 33.8464 7.37258 32.2843L30 9.65686L52.6274 32.2843C54.1895 33.8464 56.7222 33.8464 58.2843 32.2843C59.8464 30.7222 59.8464 28.1895 58.2843 26.6274L32.8284 1.17157ZM34 99L34 4L26 4L26 99L34 99Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div id="modal">
+        <div class="content">
+            <div class="src-wrapper">
+                <div class="src">
+                    <div class="left">
+                        <img class="big graphic-modal-1-visibility" src="src/graphic-polaroid-1.png">
+                        <img class="small-img graphic-modal-1-visibility" src="src/graphic-modal-1-3.png">
+                    </div>
+                    <div class="right">
+                        <img class="small-img graphic-modal-1-visibility" src="src/graphic-modal-1-2.png">
+                        <img class="big-2 graphic-modal-1-visibility" src="src/graphic-modal-1-4.png">
+                    </div>
+
+                    <img class="big graphic-modal-2-visibility" src="src/graphic-modal-2-1.png">
+
+                    <img class="big graphic-modal-3-visibility" src="src/graphic-modal-3-1.png">
+                    
+                    <div class="small">
+                        <img class="graphic-modal-2-visibility" src="src/graphic-modal-2-2.png">
+                        <img class="graphic-modal-2-visibility" src="src/graphic-polaroid-2.png">
+
+                        <img class="graphic-modal-3-visibility" src="src/graphic-modal-3-2.png">
+                        <img class="graphic-modal-3-visibility" src="src/graphic-modal-3-3.jpg">
+
+                        <img class="graphic-modal-4-visibility" src="src/graphic-modal-4-1.png">
+                        <img class="graphic-modal-4-visibility" src="src/graphic-modal-4-2.jpg">
+                    </div>
+
+                    <img class="big graphic-modal-4-visibility" src="src/graphic-modal-4-3.png">
+                </div>
+            </div>
+            <div class="label-wrapper">
+                <div class="label header">
+                    <div>
+                        <span class="title graphic-modal-1-visibility">Travelling exhibition</span>
+                        <span class="subtitle graphic-modal-1-visibility">2024</span>
+                        
+                        <span class="title graphic-modal-2-visibility">ASB Recruitment</span>
+                        <span class="subtitle graphic-modal-2-visibility">2024</span>
+
+                        <span class="title graphic-modal-3-visibility">Linhas & Projetos Logo</span>
+                        <span class="subtitle graphic-modal-3-visibility">2024</span>
+                        
+                        <span class="title graphic-modal-4-visibility">Miss Whimsy</span>
+                        <span class="subtitle graphic-modal-4-visibility">2023/2024</span>
+                    </div>
+                </div>
+                <div class="label body">
+                    <div>                    
+                        <p class="graphic-modal-1-visibility">Comunication preposition for a travelling<br>exhibition.</p>
+
+                        <p class="graphic-modal-2-visibility">The semestral ASB recruitment always counts<br>with a fun and appealing design. For this<br>semester i was one of the designers<br>behind the scenes.</p>
+                        
+                        <p class="graphic-modal-3-visibility">Linhas & Projetos is an investments business<br>with a few areas of interest.<br>This is their new logo.</p>
+                    
+                        <p class="graphic-modal-4-visibility">Miss whimsy is a smal business focused on<br>handmade ceramic pieces. This project is<br>on-going and currently exploring different<br>design areas, always having in mind the<br>business purpose, to bring on the “most<br>whimsical side of life”.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
